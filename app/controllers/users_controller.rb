@@ -14,11 +14,11 @@ class UsersController < ApplicationController
 
         #create- User.create
 
-        if User.create(username: params[:username], email: params[:email], password: params[:password])
-            redirect_to new_user_path
-        else 
-            render :new 
-        end
+         if User.create(username: params[:username], email: params[:email], password: params[:password])
+             redirect_to new_user_path
+         else 
+             render :new 
+         end
 
 
           
