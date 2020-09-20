@@ -1,4 +1,3 @@
-
 <%
 =begin%>
  <form action="/users" method="post" accept-charset="UTF-8">
@@ -16,14 +15,14 @@
 <%
 =end%>
 
-<%= form_with(url: "/users", method: "post") do |f| %>
-  <%
-=begin%>
- <%= f.label (:username, "Please enter your username") %> 
-<%
-=end%>
+<%= form_with model: @user, method: "post" do |f| %>
+  
+  <%= f.label (:username) %><br>
   <%= f.text_area( :username) %><br><br>
+  <%= f.label (:email) %><br>
   <%= f.email_field(:email) %><br><br>
+  <%= f.label (:password) %><br>
   <%= f.password_field(:password) %><br><br>
   <%= f.submit "Click on it!" %>
+
 <% end %>
