@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 <!-- <form action="/users" method="post" accept-charset="UTF-8">
+=======
+<%
+=begin%>
+ <form action="/users" method="post" accept-charset="UTF-8">
+>>>>>>> 54f3b1dab64bb7de45535c2af2da953f438163db
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="username">Username:</label>
   <input type="text" id="username" name="user[username]"><br><br>
@@ -13,6 +19,7 @@
 </form>
 -->
 
+<<<<<<< HEAD
  <% form action="/users" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="username">Username:</label>
@@ -26,3 +33,16 @@
   <input type="password" id="password" name="user[password]"><br><br>
   <input type="submit" value="Submit">
   %>
+=======
+<%= form_with model: @user, method: "post" do |f| %>
+  
+  <%= f.label (:username) %><br>
+  <%= f.text_area( :username) %><br><br>
+  <%= f.label (:email) %><br>
+  <%= f.email_field(:email) %><br><br>
+  <%= f.label (:password) %><br>
+  <%= f.password_field(:password) %><br><br>
+  <%= f.submit "Click on it!" %>
+
+<% end %>
+>>>>>>> 54f3b1dab64bb7de45535c2af2da953f438163db
