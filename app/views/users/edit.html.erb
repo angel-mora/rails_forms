@@ -1,11 +1,11 @@
-<%= form_with model: @user, method: "post" do |f| %>
+<%= form_with model: @user, method: "patch" do |f| %>
   <%= f.label :username %><br/>
   <%= f.text_field :username %><br/> 
   <%= f.label :email %><br/>
   <%= f.text_field :email %><br/>
   <%= f.label :password %><br/>
   <%= f.password_field :password %><br/>
-  <%= f.submit "Create" %><br/>
+  <%= f.submit "Save changes" %><br/>
 <% end %>
 
 
